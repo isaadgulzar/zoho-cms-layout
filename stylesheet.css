@@ -561,8 +561,8 @@
   .mt-12 {
     margin-top: var(--spacing-12, 3rem);
   }
-  .-ml-14 {
-    margin-left: calc(var(--spacing-14, 3.5rem) * -1);
+  .-ml-3 {
+    margin-left: calc(var(--spacing-3, 0.75rem) * -1);
   }
   .flex {
     display: flex;
@@ -602,6 +602,17 @@
   }
   .flex-none {
     flex: none;
+  }
+  .-translate-x-full {
+    --tw-translate-x: -100%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-0 {
+    --tw-translate-x: var(--spacing-0, 0px);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .transform {
+    transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
   .flex-col {
     flex-direction: column;
@@ -671,9 +682,6 @@
     padding-left: var(--spacing-3, 0.75rem);
     padding-right: var(--spacing-3, 0.75rem);
   }
-  .pl-1 {
-    padding-left: var(--spacing-1, 0.25rem);
-  }
   .text-sm {
     font-size: var(--font-size-sm, 0.875rem);
     line-height: var(--font-size-sm--line-height, 1.25rem);
@@ -690,10 +698,30 @@
   .text-white {
     color: var(--color-white, #fff);
   }
+  .opacity-0 {
+    opacity: 0%;
+  }
+  .opacity-100 {
+    opacity: 100%;
+  }
   .shadow-sm {
     --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .transition {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  .duration-300 {
+    transition-duration: 300ms;
+  }
+  .ease-in {
+    transition-timing-function: var(--transition-timing-function-in, cubic-bezier(0.4, 0, 1, 1));
+  }
+  .ease-out {
+    transition-timing-function: var(--transition-timing-function-out, cubic-bezier(0, 0, 0.2, 1));
   }
   .hover\:bg-cyan-400 {
     &:hover {
@@ -733,6 +761,14 @@
 @supports (-moz-orient: inline) {
   @layer base {
     *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-rotate-x: rotateX(0);
+      --tw-rotate-y: rotateY(0);
+      --tw-rotate-z: rotateZ(0);
+      --tw-skew-x: skewX(0);
+      --tw-skew-y: skewY(0);
       --tw-border-style: solid;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-colored: 0 0 #0000;
@@ -774,6 +810,46 @@
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
+}
+@property --tw-translate-x {
+  syntax: "<length> | <percentage>";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "<length> | <percentage>";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-rotate-x {
+  syntax: "<transform-function>";
+  inherits: false;
+  initial-value: rotateX(0);
+}
+@property --tw-rotate-y {
+  syntax: "<transform-function>";
+  inherits: false;
+  initial-value: rotateY(0);
+}
+@property --tw-rotate-z {
+  syntax: "<transform-function>";
+  inherits: false;
+  initial-value: rotateZ(0);
+}
+@property --tw-skew-x {
+  syntax: "<transform-function>";
+  inherits: false;
+  initial-value: skewX(0);
+}
+@property --tw-skew-y {
+  syntax: "<transform-function>";
+  inherits: false;
+  initial-value: skewY(0);
 }
 @property --tw-border-style {
   syntax: "<custom-ident>";
