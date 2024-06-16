@@ -11,3 +11,12 @@
 ::-webkit-scrollbar-thumb {
   background: #334155;
 }
+
+/* Default styles for all browsers */
+.custom-content-containers {
+  padding-bottom: 96px; /* Default padding */
+}
+
+.custom-height {
+  height: calc(100vh - 152px);
+}
