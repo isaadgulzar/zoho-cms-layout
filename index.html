@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMS Workspace Layout</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="./alpinejs@3.x.x.min.js"></script>
     <link rel="stylesheet" href="./custom.css" />
@@ -39,21 +40,21 @@
       </div>
       <!-- Content -->
       <div id="overview" class="flex-grow bg-blue-500 text-white relative flex h-full flex-col gap-5 overflow-auto p-3" :class="sidebarOpen ? 'w-3/5 md:w-4/5' : 'w-full'" >
-        <section></section>
+        <section>
           <h1 class="text-2xl font-semibold">Responsive CMS workspace layout</h1>
           <p>This static prototype demonstrates a fixed two-row header, collapsible navigation sidebar, independently scrolling content area, and persistent footer.</p>
         </section>
         <section id="features">
           <h2 class="text-xl font-semibold">Content features</h2>
-          <p>Editors</p> can organize entries into collections, review structured fields, and keep primary actions available while navigating long pages.</p>
+          <p>Editors can organize entries into collections, review structured fields, and keep primary actions available while navigating long pages.</p>
         </section>
         <section id="workflow">
           <h2 class="text-xl font-semibold">Publishing workflow</h2>
-          <p>Draft</p> content, request review, preview the result, and publish approved changes. The layout keeps each stage easy to reach on desktop and compact screens.</p>
+          <p>Draft content, request review, preview the result, and publish approved changes. The layout keeps each stage easy to reach on desktop and compact screens.</p>
         </section>
         <section id="permissions">
           <h2 class="text-xl font-semibold">Roles and permissions</h2>
-          <p>Workspace</p> roles can separate authors, reviewers, publishers, and administrators so access follows each team member’s responsibilities.</p>
+          <p>Workspace roles can separate authors, reviewers, publishers, and administrators so access follows each team member’s responsibilities.</p>
         </section>
         <section id="local-preview">
           <h2 class="text-xl font-semibold">Local preview</h2>
